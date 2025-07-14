@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money to Words Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1 id="main-title">Money to Words Converter</h1>
+            <p id="subtitle" class="subtitle">Convert numbers to words in English or Bahasa Melayu</p>
+            
+            <div class="form-group">
+                <label id="language-label" for="language">Select Language:</label>
+                <select id="language" class="language-select">
+                    <option value="english">English</option>
+                    <option value="malay">Bahasa Melayu</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label id="amount-label" for="amount">Enter Amount (0 - 1,000,000):</label>
+                <div class="input-container">
+                    <span class="currency-prefix">RM</span>
+                    <input type="number" id="amount" class="amount-input" placeholder="Enter a number..." min="0" max="1000000" step="1">
+                </div>
+                <div id="error-message" class="error-message"></div>
+            </div>
+            
+            <button id="convert-btn" class="convert-btn">Convert to Words</button>
+            
+            <div id="result" class="result">
+                <div id="result-label" class="result-label">Result:</div>
+                <div id="result-text" class="result-text">Enter a number and click convert</div>
+            </div>
+            
+            <div class="examples">
+                <h3 id="examples-title">Examples:</h3>
+                <div class="example-grid">
+                    <div class="example-item">
+                        <strong>12</strong> → <span id="example-1">twelve / dua belas</span>
+                    </div>
+                    <div class="example-item">
+                        <strong>100</strong> → <span id="example-2">one hundred / satu ratus</span>
+                    </div>
+                    <div class="example-item">
+                        <strong>1,500</strong> → <span id="example-3">one thousand five hundred / satu ribu lima ratus</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
